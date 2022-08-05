@@ -18,6 +18,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('showhello',[ControlController::class,'showHello']);
+Route::get('showhello', [ControlController::class, 'showHello']);
+Route::get('read' ,[ControlController::class, 'userList']);
+Route::post('insert' ,[ControlController::class, 'userCreate']);
+Route::post('dinamiqInsert' ,[ControlController::class, 'dinamiqUserCreate']);
+Route::post('update', [ControlController::class,'updateUser']);
 
 
+
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
