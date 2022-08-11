@@ -46,6 +46,7 @@ class ProductController extends Controller
                 'product_date_end' => $request->product_date_end,
                 'id_category' => $request->id_category
             ]);
+//            https://www.tutsmake.com/laravel-8-multiple-image-upload-via-api/
 
             $image = ($request->file('images') == null ? "" : request('images')->store('product_file', 'public'));
             $file_photo = $request->file('images');
